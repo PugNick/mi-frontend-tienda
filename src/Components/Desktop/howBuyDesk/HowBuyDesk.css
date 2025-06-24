@@ -1,0 +1,64 @@
+.HowBuyWidth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.conrtainerHowBuy li::marker{
+    color: var(--color-terciario);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.conrtainerHowBuy h2, .compraSegura h3{
+    color: var(--color-terciario);
+}
+
+.conrtainerHowBuy{
+    width: 1300px;
+}
+
+
+.conrtainerHowBuy{
+    color: var(--color-texto);
+}
+
+
+@media (max-width:767px) {
+    .HowBuyWidth{
+        min-width: 360px;
+        padding: 20px;
+    }
+
+    .pasos ol{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pasos li, .compraSegura li{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    .HowBuyWidth{
+        min-width: 768px;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+
+
+/*fuentes*/
+
+.conrtainerHowBuy h2, .compraSegura h3, .conrtainerHowBuy li::marker{
+    font-family: var(--font-title);
+}
+
+.pasos li, .compraSegura li{
+    font-family: var(--font-p);
+}

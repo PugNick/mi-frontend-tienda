@@ -1,0 +1,221 @@
+/*fuentes*/
+.containerContactH2 h2{
+    font-family: var(--font-title);
+}
+
+.dataCompany span{
+    font-family: var(--font-p);
+}
+
+.label, .send button{
+    font-family: var(--font-others);
+}
+
+.form input, .form textarea{
+    font-family: var(--font-p);
+    color: var(--color-texto);
+}
+
+
+@media (min-width:1300px) {
+    .containerContactWidth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerContact{
+    display: flex;
+    justify-content: space-around;
+    width: 1300px;
+    padding: 50px 0;
+}
+
+.dataCompany{
+    display: flex;
+    gap: 50px;
+}
+
+
+.dataContact, .redes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.iconsContainer{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.iconsContainer span{
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.label label{
+    color: var(--color-texto);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.send button{
+    width: 100%;
+    background: var(--color-terciario);
+    border: none;
+    padding: 10px 20px;
+    color: var(--color-primario);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.send button:hover{
+    background: var(--color-oscuro);
+    color: #fff;
+}
+}
+
+.containerContactH2 h2{
+    color: var(--color-terciario);
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.form input,
+.form textarea {
+    background: var(--color-secundario);
+    border: none;
+    padding: 18px 20px;
+    caret-color: var(--color-texto);
+    font-size: 16px;
+}
+
+.form textarea{
+    resize: none;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: var(--color-texto);
+    transition: .3s;
+    font-size: 16px;
+}
+
+.form input:focus::placeholder,
+.form textarea:focus::placeholder {
+    color: var(--color-secundario);
+}
+
+
+
+
+
+
+@media (max-width:767px) {
+    .containerContactWidth{
+        min-width: 360px;
+        padding: 20px;
+    }
+
+    .containerContact{
+        width: 100%;
+    }
+
+    .dataCompany{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: var(--color-texto);
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .dataContact, .redes{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .iconsContainer{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form label{
+        color: var(--color-texto);
+        font-weight: 700;
+    }
+
+    .form input, .form textarea{
+        width: 100%;
+    }
+
+    .form button{
+        width: 100%;
+        padding: 10px 0;
+        background: var(--color-terciario);
+        color: var(--color-primario);
+        font-weight: 700;
+        font-size: 20px;
+        border: none;
+    }
+}
+
+/*tablet*/
+
+@media (min-width: 768px) and (max-width: 1299px){
+    .containerContactWidth{
+        min-width: 768px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .containerContact{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+
+    .iconsContainer{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .iconsContainer span{
+        color: var(--color-texto);
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .label label{
+        color: var(--color-texto);
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .send{
+        margin-bottom: 30px;
+    }
+
+    .send button{
+        width: 100%;
+        background: var(--color-terciario);
+        border: none;
+        color: var(--color-primario);
+        font-size: 25px;
+        font-weight: 700;
+        padding: 10px;
+    }
+}

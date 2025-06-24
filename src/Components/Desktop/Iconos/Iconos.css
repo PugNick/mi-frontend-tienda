@@ -1,0 +1,33 @@
+.iconContainer{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono{
+    fill: var(--color-terciario);
+}
+
+.footerContainer .icono{
+    fill: #fff;
+}
+
+
+.containerLinks .icono{
+    width: 35px !important;
+}
+
+
+
+.containerContact .icono{
+    width: 24px;
+    height: 24px;
+}
+
+
+.ButtonTop .icono{
+    fill: var(--color-primario);
+}
+

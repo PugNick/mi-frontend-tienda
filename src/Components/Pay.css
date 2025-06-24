@@ -1,0 +1,99 @@
+/*pago exitoso*/
+.paySuccessWidth{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paySuccessContainer h1{
+    font-family: var(--font-title);
+}
+
+.paySuccessContainer p{
+    font-family: var(--font-p);
+}
+
+.paySuccessContainer button{
+    font-family: var(--font-others);
+}
+
+
+.paySuccessContainer{
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-texto);
+    font-weight: 600;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.paySuccessContainer button{
+    background: var(--color-terciario);
+    color: var(--color-primario);
+    padding: 10px 30px;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.paySuccessContainer button:hover{
+    background: var(--color-oscuro);
+    color: #fff;
+}
+
+
+/*pago rechazado y pendiente*/
+
+.payStatusWidth{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.paymentStatus{
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.paymentStatus a{
+    text-decoration: none;
+    color: var(--color-primario);
+    background: var(--color-terciario);
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.paymentStatus a:hover{
+    background: var(--color-oscuro);
+    color: #fff;
+}
+
+
+
+.paymentStatus h2{
+    font-family: var(--font-title);
+}
+
+.paymentStatus p{
+    font-family: var(--font-p);
+}
+
+.paymentStatus a{
+    font-family: var(--font-others);
+}

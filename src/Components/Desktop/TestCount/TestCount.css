@@ -1,0 +1,126 @@
+.testContainerWidth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.testCountContainer{
+    width: 1300px;
+    color: var(--color-texto);
+}
+
+.testCountContainer h2{
+    color: var(--color-terciario);
+    font-size: 25px;
+}
+
+.testCountContainer span, .testCountContainer li, .testCountContainer p{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.testCountContainer a{
+    text-decoration: none;
+    color: var(--color-terciario);
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 20px;
+    transition: .3s;
+}
+
+
+.crearCuentaImg{
+    width: 300px;
+}
+
+.crearCuenta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.exclamacion{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconText{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconText h3{
+    margin: 0;
+}
+
+
+.backToCheckoutBtn{
+    background: var(--color-terciario);
+    color: var(--color-primario);
+    border: none;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .3s;
+    cursor: pointer;
+}
+
+
+.backToCheckoutBtn:hover{
+    background: var(--color-oscuro);
+    color: #fff;
+}
+
+
+@media (max-width:767px) {
+    .testContainerWidth{
+        min-width: 360px;
+        padding: 0 20px;
+    }
+
+    .testCountContainer{
+        width: 100%;
+    }
+
+    .crearCuenta ol{
+        padding: 0 20px;
+    }
+
+    .backToCheckoutBtn{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    .testContainerWidth{
+        min-width: 768px;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+
+
+
+/*fuentes*/
+
+.testCountContainer h2, .testCountContainer h3, .crearCuenta li::marker{
+    font-family: var(--font-title);
+}
+
+.testCountContainer span, .crearCuenta li, .testCountContainer p{
+    font-family: var(--font-p);
+}
+
+.backToCheckoutBtn {
+    font-family: var(--font-others);
+}
+
+.crearCuenta li::marker{
+    color: var(--color-terciario);
+}
+

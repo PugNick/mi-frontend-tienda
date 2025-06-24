@@ -1,0 +1,11 @@
+.notFound{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.notFound p{
+    font-size: 20px;
+    color: var(--color-texto);
+    font-weight: 800;
+}

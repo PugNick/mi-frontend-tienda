@@ -1,0 +1,221 @@
+.profileWidth{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.flexContainerProfile{
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.flexContainerProfile::before{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-terciario);
+    position: absolute;
+}
+
+.flexContainerProfile::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-terciario);
+    position: absolute;
+    bottom: 0;
+}
+
+
+.myData{
+    margin: 0;
+    color: var(--color-texto);
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nameContainer, .emailContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.nameContainer span, .emailContainer span{
+    background: var(--color-terciario);
+    color: var(--color-primario);
+    padding: 5px 10px;
+    font-weight: 700;
+} 
+
+.profileWidth .nameUser, .emailContainer .emailUser{
+    background: var(--color-secundario);
+    color: #fff;
+}
+
+.userData, .historialCompras, .ordenesUser{
+    margin-top: 20px;
+}
+
+.userDataEdit::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    /* background-color: var(--color-terciario); */
+    background: var(--color-texto);
+}
+
+.userDataEdit{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.dataEdit{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.dataEdit h3{
+    margin: 0;
+    color: var(--color-texto);
+}
+
+.containerPen{
+    width: 24px;
+    height: 24px;
+}
+
+.pen{
+    fill: var(--color-terciario);
+}
+
+.inputsContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.userData input{
+    background: var(--color-secundario);
+    border: none;
+    padding: 18px 20px;
+    caret-color: var(--color-texto);
+    font-size: 16px;
+}
+
+.userData input:focus{
+    outline: none;
+}
+
+.userData input::placeholder{
+    color: var(--color-texto);
+    transition: .3s;
+    font-size: 16px;
+}
+
+.userData input:focus::placeholder{
+    color: var(--color-secundario);
+}
+
+
+
+
+.userData form button, .closeAccount button{
+    padding: 10px 30px;
+    transition: .3s;
+    cursor: pointer;
+    color: var(--color-primario);
+    border: none;
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.userData form button{
+    background-color: var(--color-terciario);
+}
+
+
+.closeAccount button{
+    margin-top: -15px;
+    background: var(--color-error);
+}
+
+
+.userData form button:hover{
+    background-color: var(--color-oscuro);
+    color: #fff;
+}
+
+
+.closeAccount button:hover{
+    background: var(--color-error-hover);
+    color: #fff;
+}
+
+.errorProfile{
+    color: var(--color-error);
+}
+
+.successProfile{
+    color: var(--color-success);
+}
+
+
+
+@media (max-width:767px) {
+
+    .profileWidth{
+        min-width: 360px;
+        padding: 0 20px;
+    }
+
+    .flexContainerProfile{
+        flex-direction: column;
+        width: 100%;
+    }
+    .inputsContainer{
+        flex-direction: column;
+    }
+
+    .ordenesUser{
+        margin-top: 50px;
+    }
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1299px) {
+    .profileWidth{
+        min-width: 768px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .flexContainerProfile{
+        flex-direction: column;
+    }
+}
+
+
+
+/*fuentes*/
+
+.myData, .dataEdit h3{
+    font-family: var(--font-title);
+}
+
+.data span, .inputsContainer input, .userData form button, .closeAccount button{
+    font-family: var(--font-others);
+}
+

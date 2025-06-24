@@ -1,0 +1,16 @@
+.ButtonTop{
+    position: fixed;
+    bottom: 130px;
+    right: 24px;
+    background: var(--color-terciario);
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+

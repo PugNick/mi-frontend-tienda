@@ -1,0 +1,28 @@
+.categoryMobileContainer{
+    position: relative;
+    margin-top: 10px;
+}
+
+.categoryMobileContainer::before{
+    position: absolute;
+    top: -5px;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: var(--color-secundario);
+}
+
+
+.categoriesMenuMobile p{
+    color: var(--color-texto);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btnSubCategoriasMobile{
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+

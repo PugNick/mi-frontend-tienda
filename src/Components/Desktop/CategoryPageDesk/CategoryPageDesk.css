@@ -1,0 +1,19 @@
+.containerProductsCategoryDesk{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.productCardCategoryDesk{
+    width: calc(25% - 16px); /* 25% del contenedor menos el espacio del gap */
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.productCardCategoryDesk a{
+    text-decoration: none;
+    color: #06ffff;
+}

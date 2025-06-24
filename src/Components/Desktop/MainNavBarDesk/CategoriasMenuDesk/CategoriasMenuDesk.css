@@ -1,0 +1,47 @@
+.menuCategWidth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--color-terciario);
+}
+
+.categoriesMenuDesk{
+    
+    padding: 30px 0;
+    width: 1300px;
+}
+
+.categoriesDesk{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.categoriesDesk, .subcategoriesDesk{
+    list-style: none;
+}
+
+.subcategoriesDesk{
+    padding: 0;
+}
+
+
+.categoriesMenuDesk a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.subcategoryDesk a{
+    color: #c5c5c5;
+}
+
+
+.categoriesDesk a:hover{
+    color: #c5c5c5;
+}
+
+.subcategoryDesk a:hover{
+    color: #fff;
+}

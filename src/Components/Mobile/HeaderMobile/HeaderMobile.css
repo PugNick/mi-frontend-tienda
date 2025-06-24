@@ -1,0 +1,76 @@
+.relativeContainer{
+    position: relative;
+}
+
+.HeaderButton{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-primario);
+}
+
+.alignCenterHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+
+.imgLogoM{
+    width: 90px;
+}
+
+
+.imgLogoM img{
+    width: 100%;
+}
+
+
+
+.amountCartM.showM{
+    position: relative;
+    background: var(--color-terciario);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.amountCartM.showM::before{
+    content: '';
+    position: absolute;
+    top: -65%;
+    left: 0;
+    border-top: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-bottom: 12px solid var(--color-terciario);
+}
+
+
+.cartBadgeM{
+    color: var(--color-primario);
+    font-weight: 600;
+    z-index: 1000;
+}
+
+
+.SearchBarContainerM{
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+
+
+
+/*fuentes*/
+
+.cartBadgeM {
+    font-family: var(--font-p);
+}

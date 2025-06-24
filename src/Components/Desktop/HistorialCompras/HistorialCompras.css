@@ -1,0 +1,135 @@
+.historialComprasContainer h2{
+    color: var(--color-texto);
+    margin: 0;
+}
+
+
+/*sin compras registradas*/
+
+.containerNoCompras p{
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+
+.containerNoCompras a p{
+    display: inline-flex;
+    color: var(--color-primario);
+    font-size: 18px;
+    transition: .3s;
+    background: var(--color-terciario);
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.containerNoCompras a:hover p {
+    color: #fff;
+    background: var(--color-oscuro);
+}
+
+
+/*compras registradas*/
+
+.historialComprasContainer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.historialComprasContainer li{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.historialComprasContainer li::before{
+    content: '';
+    height: 3px;
+    width: 100%;
+    /* background: var(--color-terciario); */
+    background: var(--color-texto);
+}
+
+.containerText{
+    display: flex;
+}
+
+.containerText span{
+    background: var(--color-terciario);
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-primario);
+    
+}
+
+
+.productsNameContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+.importantText{
+    background: transparent !important;
+    color: var(--color-texto) !important;
+}
+
+.linContainerDetail a{
+    color: var(--color-terciario);
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+    padding-left: 15px;
+}
+
+
+.morePurchase{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+}
+
+.morePurchase span{
+    color: var(--color-primario);
+    background: var(--color-terciario);
+    padding: 10px 0;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    transition: .3s;
+}
+
+
+/*hovers*/
+
+.linContainerDetail a:hover{
+    color: var(--color-oscuro);
+}
+
+.morePurchase:hover span{
+    color: #fff;
+    background: var(--color-oscuro);
+}
+
+
+/*fuentes*/
+
+.historialComprasContainer h2{
+    font-family: var(--font-title);
+}
+
+.containerNoCompras p, .historialComprasContainer span{
+    font-family: var(--font-p);
+}
+
+.containerNoCompras a, .linContainerDetail a, .morePurchase span{
+    font-family: var(--font-others);
+}

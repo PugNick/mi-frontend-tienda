@@ -1,0 +1,356 @@
+/* Contenedor principal de las imágenes */
+.flexImages {
+    height: 445px; /* Altura total del contenedor */
+    width: 575px; /* Ancho total del contenedor */
+    display: flex;
+    gap: 30px; /* Separación entre la columna de miniaturas y la imagen principal */
+}
+
+/* Contenedor de la galería con botones */
+.imageGalleryWithButtons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 445px; /* Altura total del carrusel */
+    overflow: hidden; /* Ocultar imágenes fuera del rango visible */
+}
+
+/* Contenedor interno de las miniaturas */
+.imageGallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Separación entre miniaturas */
+    transition: transform 0.5s ease; /* Animación suave para el desplazamiento */
+}
+
+/* Miniaturas */
+.thumbnail {
+    width: 100px; /* Ancho fijo de cada miniatura */
+    height: 100px; /* Altura fija de cada miniatura */
+    object-fit: cover; /* Ajustar la imagen dentro del contenedor */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.thumbnail.selected {
+    border: 3px solid var(--color-terciario); /* Borde para la miniatura seleccionada */
+}
+
+.thumbnail:hover {
+    border: 3px solid var(--color-terciario); /* Borde al pasar el mouse */
+}
+
+/* Imagen principal */
+.mainImage {
+    width: 445px; /* Ancho de la imagen principal */
+    height: 445px; /* Altura de la imagen principal */
+}
+
+.mainImage img {
+    width: 100%; /* Ajustar la imagen al contenedor */
+    height: 100%; /* Ajustar la imagen al contenedor */
+    object-fit: cover; /* Ajustar la imagen sin deformarla */
+}
+
+/* Botones de desplazamiento */
+.scrollButton {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.scrollButton:disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
+
+.scrollButton.up {
+    top: 10px; /* Posición superior del botón "arriba" */
+}
+
+.scrollButton.down {
+    bottom: 10px; /* Posición inferior del botón "abajo" */
+}
+
+.scrollButton:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* Clases dinámicas para el desplazamiento vertical */
+.imageGallery.translateY-0 {
+    transform: translateY(0); /* Sin desplazamiento */
+}
+
+.imageGallery.translateY-1 {
+    transform: translateY(-115px); /* Desplazar una miniatura hacia arriba */
+}
+
+.imageGallery.translateY-2 {
+    transform: translateY(-230px); /* Desplazar dos miniaturas hacia arriba */
+}
+
+.imageGallery.translateY-3 {
+    transform: translateY(-345px); /* Desplazar tres miniaturas hacia arriba */
+}
+
+/* Clases dinámicas para el desplazamiento horizontal */
+.imageGallery.horizontal {
+    flex-direction: row; /* Cambiar a fila para el desplazamiento horizontal */
+    gap: 15px; /* Separación entre miniaturas */
+}
+
+.imageGallery.horizontal.translateX-0 {
+    transform: translateX(0); /* Sin desplazamiento */
+}
+
+.imageGallery.horizontal.translateX-1 {
+    transform: translateX(-115px); /* Desplazar una miniatura hacia la izquierda */
+}
+
+.imageGallery.horizontal.translateX-2 {
+    transform: translateX(-230px); /* Desplazar dos miniaturas hacia la izquierda */
+}
+
+.imageGallery.horizontal.translateX-3 {
+    transform: translateX(-345px); /* Desplazar tres miniaturas hacia la izquierda */
+}
+
+
+
+
+
+
+
+.containerWidthProductDetail{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.productDetailMain{
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productDetailContainer{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.imgsDescription{
+    max-width: 590px;
+}
+
+.descriptionContainer{
+    padding: 10px 0;
+}
+
+.descriptionProduct{
+    color: var(--color-texto);
+    font-weight: 650;
+    font-size: 18px;
+}
+
+
+.productBuy{
+    width: 590px;
+}
+
+.productBuy h2{
+    margin: 0 0 10px 0;
+    font-size: 35px;
+    color: var(--color-terciario);
+}
+
+.priceDetail{
+    margin: 0 0 30px 0;
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+.talle{
+    margin: 0 0 35px 0;
+}
+
+.talleContainer span{
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    font-weight: 650;
+    color: var(--color-terciario);
+}
+
+.sizeButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.sizeButtons button{
+    background: var(--color-terciario);
+    border: none;
+    color: var(--color-primario);
+    font-weight: 600;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sizeButtons button:hover{
+    background: var(--color-oscuro);
+    color: #fff;
+}
+
+
+
+
+.cantidad{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 40px 0;
+}
+
+.cantidad label{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-terciario);
+}
+
+.cantidad input{
+    background: var(--color-secundario);
+    border: none;
+    padding: 18px 20px;
+    caret-color: var(--color-texto);
+    font-size: 16px;
+    width: 150px;
+}
+
+
+.cantidad input:focus{
+    outline: none;
+}
+.cantidad input::placeholder{
+    color: var(--color-texto);
+    transition: .3s;
+    font-size: 16px;
+}
+
+.cantidad input:focus::placeholder{
+    color: var(--color-secundario);
+}
+
+/* Para Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.addToCart{
+    width: 100%;
+}
+
+.addToCart button{
+    width: 100%;
+    padding: 15px 0;
+    font-size: 23px;
+    font-weight: 650;
+    background: var(--color-terciario);
+    border: none;
+    cursor: pointer;
+    color: var(--color-primario);
+    transition: .3s;
+}
+
+
+
+.addToCart button:hover{
+    background: var(--color-oscuro);
+    color: #fff;
+}
+
+
+
+.productosRelacionados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.productosRelacionados h2{
+    font-size: 30px;
+    color: var(--color-terciario);
+}
+
+.relatedProductsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.relatedProductCard{
+    text-align: center;
+}
+
+.relatedProductCard a{
+text-decoration: none;
+    color: #06ffff;
+}
+
+
+.errorProductNotFound{
+    color: var(--color-error);
+}
+
+
+/*fuentes*/
+
+.descriptionContainer span{
+    font-family: var(--font-p);
+}
+
+
+
+.productBuy h2, .productosRelacionados h2{
+    font-family: var(--font-title);
+}
+
+.productBuy p, .talleContainer span, .sizeButtons button, .cantidad input{
+    font-family: var(--font-p);
+}
+
+.cantidad label, .addToCart button{
+    font-family: var(--font-others);
+}
+

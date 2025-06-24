@@ -1,0 +1,94 @@
+
+    .sliderContianerWidth{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 400px;
+    }
+
+
+    .sliderContainer{
+        width: 1300px;
+    }
+
+    .imgContainerSlider{
+        width: 1300px;
+        height: 100%;
+    }
+
+
+    .imgContainerSlider img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    .slick-prev:before, .slick-next:before{
+        color: transparent !important;
+    }
+
+    
+
+
+
+@media (max-width:767px){
+    .sliderContianerWidth{
+        min-width: 320px;  /* Asegura que ocupe todo el viewport */
+        display: flex;
+        justify-content: center;     /* Elimina padding para evitar overflow */
+        box-sizing: border-box;
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    .sliderContainer{
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .imgContainerSlider{
+        height: 100%;
+        width: 100vw;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    .sliderContianerWidth {
+        width: 100%;
+        max-width: 100vw;
+        min-width: 0;
+        overflow-x: hidden;
+    }
+
+    .sliderContainer {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .imgContainerSlider {
+        width: 100%;
+        max-width: 768px;
+        height: 300px; /* o 350px si prefieres */
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .imgContainerSlider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
+
+    
+}

@@ -1,0 +1,40 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: var(--color-primario);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  /*colores*/
+  --color-primario : #EBDBC4;
+  --color-secundario : #cec0ac;
+  --color-terciario : #96784C;
+  --color-oscuro : #93897b;
+  --color-texto :#5a574f;
+  --color-error: #a80000;
+  --color-error-hover: #690000;
+  --color-success: #006400;
+
+  /*fuentes*/
+  --font-title: "Merriweather", serif;
+  --font-menu: "Rowdies", sans-serif;
+  --font-p: "Poppins", sans-serif;
+  --font-others: "Raleway", sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

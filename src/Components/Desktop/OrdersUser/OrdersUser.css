@@ -1,0 +1,10 @@
+.ordersUserContainer h2{
+    margin: 0;
+    /* color: var(--color-terciario); */
+    color: var(--color-texto);
+}
+
+.containerNoOrders p{
+    color: var(--color-texto);
+    font-weight: 600;
+}

@@ -1,0 +1,342 @@
+.carouselIndicators {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.carouselDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-secundario);
+    display: inline-block;
+    cursor: pointer;
+}
+.carouselDot.active {
+    background: var(--color-terciario);
+}
+
+
+.ghostOverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.productGhostContainer {
+    width: 95vw;
+    max-width: 400px;
+    background: var(--color-primario);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    margin: auto;
+    /* Animación */
+    transform: translateY(-100vh);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s cubic-bezier(.4,0,.2,1);
+    /* Centrado vertical extra por si acaso */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.productGhostContainer.slideDown {
+    transform: translateY(0);
+    opacity: 1;
+}
+.productGhostContainer.slideUp {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+@media (max-width:767px){
+    .productDetailMobileContainer{
+    padding: 0 20px;
+}
+
+.mainImageMobile {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 12px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.mainImageMobileImg {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+
+.infoMobile h2{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--color-terciario);
+    margin: 5px 0;
+}
+
+.priceMobile{
+    display: flex;
+    justify-content: center;
+    color: var(--color-texto);
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 0 5px 0;
+}
+
+
+.sizesMobile{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sizesMobile span{
+    color: var(--color-terciario);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.buttonSizeMobile{
+    display: flex;
+    gap: 10px;
+}
+
+.buttonSizeMobile button {
+    background: var(--color-terciario);
+    color: var(--color-primario);
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.quantityMobile{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.quantityMobile label{
+    color: var(--color-terciario);
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.quantityMobile input{
+    background: var(--color-secundario);
+    border: none;
+    padding: 18px 20px;
+    caret-color: var(--color-texto);
+    font-size: 16px;
+}
+
+.quantityMobile input:focus{
+    outline: none;
+}
+.quantityMobile input::placeholder{
+    color: var(--color-texto);
+    transition: .3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.quantityMobile input:focus::placeholder{
+    color: var(--color-secundario);
+}
+
+.addToCartMobile{
+    width: 100%;
+    background: var(--color-terciario);
+    color: var(--color-primario);
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
+    padding: 10px;
+}
+
+.descriptionMobile{
+    margin: 20px 0;
+}
+
+.descriptionTitleMobile{
+    color: var(--color-terciario);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.descriptionMobile p{
+    color: var(--color-texto);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.titleMobileRelatedProducts{
+    font-size: 25px !important;
+}
+
+
+
+}
+
+
+
+/*tablet*/
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    .productDetailMobileContainer {
+        padding: 0 20px;
+        min-width: 768px;
+        width: 100%;
+    }
+
+    .mainImageMobile{
+        min-height: 600px;
+        height: 60vh;
+    }
+
+    .mainImageMobileImg{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carouselIndicators{
+        margin-top: 30px;
+    }
+
+    .carouselDot{
+        width: 15px;
+        height: 15px;
+    }
+
+    .infoMobile h2{
+        color: var(--color-terciario);
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .priceMobile{
+        color: var(--color-texto);
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+    }
+
+    .talleContianer{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .talleContianer span{
+        color: var(--color-terciario);
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .buttonSizeMobile{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .sizeButtonMobile{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color-terciario);
+        border: none;
+        color: var(--color-primario);
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .quantityMobile{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .quantityMobile label{
+        color: var(--color-terciario);
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+
+    .quantityMobile input{
+        background: var(--color-secundario);
+        border: none;
+        padding: 18px 20px;
+        caret-color: var(--color-texto);
+        font-size: 16px;
+    }
+
+    .quantityMobile input:focus{
+        outline: none;
+    }
+    .quantityMobile input::placeholder{
+        color: var(--color-texto);
+        transition: .3s;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .quantityMobile input:focus::placeholder{
+        color: var(--color-secundario);
+    }
+
+    .addToCartMobile{
+        background: var(--color-terciario);
+        border: none;
+        color: var(--color-primario);
+        font-size: 25px;
+        font-weight: 700;
+        padding: 10px 30px;
+        margin: 10px 0;
+    }
+
+    .descriptionMobile{
+        margin: 10px 0;
+    }
+
+    .descriptionMobile span{
+        color: var(--color-terciario);
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .descriptionMobile p{
+        margin: 0;
+        color: var(--color-texto);
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,382 @@
+.containerImgCard img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen sin deformarla */
+    display: block;
+}
+
+.buttonsWidth{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.ProductAndNavContainer .paginationButtons{
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+
+
+.paginationButtons span{
+    color: var(--color-texto);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.paginationButtons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--color-terciario);
+    border: none;
+    cursor: pointer;
+    width: 40px;
+}
+
+
+.arrowIcon{
+    fill: var(--color-primario);
+    transition: fill .3s;
+}
+
+.arrowIcon.left {
+    transform: rotate(180deg);
+}
+
+.loading{
+    color: var(--color-texto);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/*fuentes*/
+.cardContainer h3{
+    font-family: var(--font-title);
+}
+
+.productCard p{
+    font-family: var(--font-p);
+}
+
+.productCard button{
+    font-family: var(--font-others);
+}
+.seeMoreLink{
+    font-family: var(--font-others);
+}
+
+.paginationButtons span{
+    font-family: var(--font-p);
+}
+
+/*desktop*/
+@media (min-width:1300px){
+    .listProductWidth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.productListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1300px;
+    gap: 16px;
+    padding-left: 16px;
+}
+
+
+
+
+.productCard {
+    width: calc(25% - 16px); /* 25% del contenedor menos el espacio del gap */
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid var(--color-terciario); */
+    box-shadow: 1px 3px 10px 3px var(--color-terciario);
+    padding: 20px 0 40px 0;
+}
+
+
+.productCard a{
+    text-decoration: none;
+    
+}
+
+.cardContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.containerImgCard {
+    width: 250px;
+    height: 400px; /* Ajusta la altura según necesites */
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+.containerImgCard .overlay{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.cardContainer h3{
+    font-size: 15px;
+    transition: .5s;
+    margin-bottom: 5px;
+    color: var(--color-terciario);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+.productCard p{
+    font-size: 20px;
+    font-weight: 650;
+    color: var(--color-texto);
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.productCard button{
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+
+
+
+
+.containerImgCard img:hover{
+    filter: brightness(0.9);
+}
+
+
+.containerImgCard:hover .overlay {
+  opacity: 1;
+}
+
+.cardContainer h3:hover{
+    color: var(--color-oscuro);
+}
+
+.productCard button:hover{
+    background: var(--color-oscuro);
+    color: #fff; 
+}
+
+
+.paginationButtons button:hover{
+    background-color: var(--color-oscuro);
+}
+
+
+.arrowBtn:hover .arrowIcon {
+    fill: #fff;
+}
+}
+
+
+
+
+/*mobile*/
+@media (max-width:767px){
+    .listProductWidth{
+        padding: 20px 20px 0 20px;
+    }
+
+
+    .containerImgCard {
+        width: 100%;
+        height: 150px; /* o la altura que prefieras */
+        min-height: unset;
+        max-height: 200px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 10px 0 10px;
+}
+
+    .productListContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .productCard {
+        width: calc(50% - 16px); /* 2 columnas con espacio entre ellas */
+        box-sizing: border-box;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 10px 2px var(--color-terciario);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .productCard a{
+        text-decoration: none;
+    }
+
+    .cardContainer h3{
+        font-size: 15px;
+        text-align: center;
+        color: var(--color-terciario);
+        padding: 0 5px;
+        margin: 0;
+    }
+
+    .productCard p{
+        color: var(--color-texto);
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .productCard button{
+        background: var(--color-terciario);
+        color: var(--color-primario);
+        font-weight: 600;
+        font-size: 16px;
+        border: none;
+        padding: 10px 0;
+    }
+
+
+    .ghostOverlay{
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    .listProductWidth{
+        min-width: 768px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .productListContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .productCard{
+        width: calc(25% - 16px); /* 25% del contenedor menos el espacio del gap */
+        box-sizing: border-box;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 10px 2px var(--color-terciario);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cardContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardContainer h3{
+        font-size: 18px;
+        text-align: center;
+        margin: 5px 0;
+        padding: 0 10px;
+        color: var(--color-terciario);
+    }
+
+    .containerImgCard{
+        width: 167px;
+        height: 230px;
+        padding: 10px 10px 0 10px;
+    }
+
+    .productCard p{
+        margin: 0;
+        padding: 5px;
+        color: var(--color-texto);
+        font-weight: 700;
+    }
+
+    .productCard button{
+        width: 100%;
+        background: var(--color-terciario);
+        border: none;
+        color: var(--color-primario);
+        font-weight: 600;
+        padding: 10px 0;
+    }
+
+    .productCard a{
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+.ghostOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: background 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.ghostOverlay .productGhostContainer {
+    transform: translateY(-100vh);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.ghostOverlay.slideDown .productGhostContainer {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.ghostOverlay.slideUp .productGhostContainer {
+    transform: translateY(-100vh);
+    opacity: 0;
+}

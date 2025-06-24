@@ -1,0 +1,83 @@
+.listaComprasWidth{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.listComprasContainer{
+    width: 1300px;
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.listComprasContainer h2{
+    color: var(--color-terciario);
+}
+
+.compra {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.compra::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: var(--color-terciario);
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+}
+
+
+.containerTextList{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.productsNameContainerList{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.compra a{
+    background: var(--color-terciario);
+    color: var(--color-primario);
+    text-decoration: none;
+    padding: 10px 30px;
+    transition: .3s;
+}
+
+.compra a:hover{ 
+    background: var(--color-oscuro);
+    color: #fff;
+}
+
+.compra:has(a:hover)::after {
+    background: var(--color-oscuro);
+}
+
+
+@media (max-width:767px) {
+    .listaComprasWidth{
+        min-width: 360px;
+        padding: 0 20px;
+    }
+
+    .listComprasContainer{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    .listaComprasWidth{
+        min-width: 768px;
+        width: 100%;
+        padding: 0 20px;
+    }
+}

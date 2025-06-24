@@ -1,0 +1,208 @@
+.mapaContainer h2{
+    color: var(--color-terciario);
+}
+
+
+
+/*buscar puntos*/
+.inputMapContainer input{
+    background: var(--color-secundario);
+    border: none;
+    padding: 18px 20px;
+    caret-color: var(--color-texto);
+    font-size: 16px;
+    width: 100%;
+}
+
+.inputMapContainer input:focus{
+    outline: none;
+}
+.inputMapContainer input::placeholder{
+    color: var(--color-texto);
+    transition: .3s;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.inputMapContainer input:focus::placeholder{
+    color: var(--color-secundario);
+}
+
+.locationSelected{
+    color: var(--color-terciario);
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+
+
+
+/*lista de puntos de retiro*/
+.pickup-option{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pickup-label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-secundario);
+    padding: 20px;
+}
+
+.pickup-label label{
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+
+.pickup-option input[type="radio"] {
+  margin-right: 8px;
+  accent-color: var(--color-secundario); /* color por defecto (cuando NO está seleccionado) */
+  cursor: pointer;
+}
+
+/* .pickup-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-terciario);
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 8px;
+} */
+
+.pickup-label:has(input:checked) {
+    background: var(--color-secundario);
+    border: solid 2px var(--color-terciario);
+    transition: background 0.2s, color 0.2s;
+}
+
+/*punto seleccionado*/
+.PointSelected{
+    color: var(--color-terciario);
+    font-weight: 600;
+    font-size: 23px;
+    display: flex;
+    gap: 15px;
+    margin: 20px 0 0 0;
+}
+
+.PointSelected p{
+    margin: 0;
+    color: var(--color-texto);
+}
+
+.PickUpName{
+    font-weight: 700;
+    color: var(--color-terciario) !important;
+}
+
+
+/*por si el usuario aun no busco los puntos*/
+.up{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-terciario);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.errorPickUp{
+    color: var(--color-error);
+}
+
+
+@media (min-width:1300px) {
+
+    /*mapa*/
+.mapa {
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+    border: solid 4px var(--color-terciario);
+    border-radius: 15px;
+}
+}
+
+
+@media (max-width:767px) {
+    .mapContainerWidth,
+    .mapaContainer {
+        width: 100%;
+        min-width: unset;
+        box-sizing: border-box;
+    }
+
+    .inputMapContainer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .inputMapContainer input {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mapa {
+        width: 100% !important;
+        min-width: 0;
+        max-width: 100vw;
+        height: 300px;
+        box-sizing: border-box;
+        margin-top: 30px;
+        border: solid 4px var(--color-terciario);
+        border-radius: 15px;
+    }
+
+    .pickup-label .pickup-radio{
+        width: 20px;
+    }
+
+    .PointSelected{
+        flex-direction: column;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    
+    .mapa{
+        width: 100%;
+        height: 350px;
+        border: solid 4px var(--color-terciario);
+        border-radius: 15px;
+    }
+
+    .pickup-option{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+
+    .pickup-label{
+        width: 100% !important;
+    }
+}
+
+
+
+/*fuentes*/
+
+.mapaContainer h2{
+    font-family: var(--font-title);
+}
+
+.up p, .PointSelected p{
+    font-family: var(--font-p);
+}
+
+.pickup-label label{
+    font-family: var(--font-others);
+}

@@ -1,0 +1,27 @@
+.widthHN {
+    background: var(--color-primario);
+    box-shadow: 1px 3px 10px 3px var(--color-terciario);
+    width: 100%;
+    margin-bottom: 20px;
+    /* Por defecto, no sticky */
+    position: static;
+    top: auto;
+    z-index: 100;
+}
+
+.widthHN.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.HNContainer {
+    position: relative;
+    width: 100%;
+}
+
+.header,
+.menu {
+    width: 100%;
+    /* Sin transición de ocultar */
+}
