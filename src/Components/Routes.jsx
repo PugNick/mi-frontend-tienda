@@ -37,7 +37,7 @@ import OrdersList from './Desktop/OrderList/OrdersList';
 
 
 //para el usuario
-import CountTest from './Desktop/testCount/TestCount';
+import CountTest from './Desktop/TestCount/TestCount';
 
 //pruebas
 import Success from './PaySuccess';
