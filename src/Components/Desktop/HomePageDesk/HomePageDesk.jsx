@@ -35,7 +35,7 @@ function HomePageDesk() {
                         <CategoryCard
                             tittle="Buzos"
                             image={Buzos}
-                            to="/category/Pantalones"
+                            to="/category/Buzos"
                         />
                         <CategoryCard
                             tittle="Camperas"
