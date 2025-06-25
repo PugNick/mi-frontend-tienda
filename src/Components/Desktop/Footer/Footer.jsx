@@ -103,6 +103,13 @@ function Footer() {
                     </div>
                 </div>
             </div>
+            <div className="derechos">
+                <p>© 2025 Vestire. Todos los derechos reservados.</p>
+                <p>
+                    Las imágenes de productos y modelos fueron obtenidas con fines ilustrativos desde <a href="https://dloindumentaria.com.ar" target="_blank" rel="noopener noreferrer">DLO indumentaria</a>.
+                    Todos los derechos pertenecen a sus respectivos autores.
+                </p>
+            </div>
         </div>
     )
 }
