@@ -65,6 +65,7 @@ function TestCount() {
                     >
                         Continuar con la compra
                     </button>
+
                 </div>
             </div>
             <Footer />
